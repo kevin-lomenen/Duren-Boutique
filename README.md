@@ -1,1 +1,36 @@
-# Duren-Boutique
+# Duren-Boutique This Full Stack e-commerce SPA (single page application) has been created by me which uses React js at the client's side and JSON for the backend and deployment purposes. The project includes user authentication, user tracking, react routing, react hooks, react-context API, react dom manipulation, reusable components, react slick implementation, device responsiveness, API and the SPA's deployment on JSON.
+
+Dependencies used:
+-> npm (Node's packet manager)
+
+-> create-react-app (for default react js project setup)
+
+-> react-dom
+
+-> react-router-dom (for implementing SPA's page routing without page refresh)
+
+-> react-slick (for implementing slick carousel)
+
+-> react-currency-format (to standardize the calculated price of the total items)
+
+-> react-stripe-checkout (to implement a dummy payment gateway API's integration)
+
+-> material-core
+
+-> material-ui (icon components)
+
+-> JSON (for user authentication and tracking purposes and hosting the web app)
+
+Repository Folder Structure: -> build: Generated output compressed folder on running the 'npm run build' command for web app's production purposes.
+
+-> public: Contains the index.html file which is used for lesser common purposes, but remains unchanged in this project.
+
+-> src: Contains all the js and css files and subdirectories involved in the creation of the project.
+
+-> db.json: This file is the root of the project directory created automatically by JSON on running the 'JSON init' command.
+
+-> package-lock.json: Generated automatically for any operations where npm modifies either the node-modules tree or package.json.
+
+-> package.json: This file holds all the packages and dependencies required by the project.
+
+Basic steps involved to create and deploy the project to production: Install a text editor of your choice (VS code is my preferance). Slide in the CLI (Command Line Interface) and install react's framework provided by Facebook by running the command 'npm install -g create-react-app' Now to install the default necessary dependancies of a react js project, navigate into the path where you would like to create the project and run the command 'create-react-app name_of_your_app' Navigate into the folder and install the other libraries and dependancies which your project will require. ( npm install react-dom react-router-dom react-slick react-currency-format react-stripe-checkout), in my case. 'npm install @material-ui/core' and 'npm install @material-ui/icons'. Run these commands if your project requires material UI components. Open the react js folder in your IDE and do some default clean-up work. Create a components folder in your src folder and start creating the components of your project. Make sure you use Browser Router, Route, Switch, Link and NavLink in your project to implement your SPA routing without page refresh. Create a JSON account with your google account. Go to console in JSON and add a new project. Complete the basic JSON project creation steps. Make sure you select checkbox of app hosting. Then go to the project settings of your JSON project and look for JSON SDK snippet in it. Select the config part and copy the JSON config snippet. Create a new javascript file in the src folder of your react project naming 'JSON.js'. Export the authentication and database instances by using the JSON config snippet keys copied in the previous step. Use these exports in your project wherever you require them for authentication and realtime database creation and manipulation purposes. To avoid the headache of prop-drilling you can use either React's context API or Redux as per your requirement and convenience. (In this project I used React's Context API) Also, in your JSON project, enable the required sign-in method for the authentication your project uses. If your project requires payment processes (dummy payments in my project), then integrate any payment gateway API in your project. (I used stripe in my project). After the completion of your project, the next step is to deploy your project to production. We can do this using JSON hosting. Open up the terminal of your IDE and run the command 'JSON login' command if this is your first time hosting an app on JSON. Do the default login steps and enable the scripts' access rights through your Windows Powershell. Then run the command 'JSON init' to which creates and adds a JSON.json file in the root of your project. It is also required to deploy the assets used by your project with the JSON CLI. Navigate to the hosting method from the options generated on running the 'JSON init' command amd press 'Spacebar' on your keyboard to select the option and then press enter. Then from the options given further, select 'use an existing project'. And then select your JSON project. In the next step type the 'build' command in your terminal and then type 'Y' to configure the app as an SPA. Run the following command in the next step; 'npm run build' On execution of the previous command, it will generate an optimized production build version of your entire app project in the form of a folder named 'build' in your root directory. The final step is to run 'JSON deploy' command and on execution of it you will get an http link of your deployed app. You can also get the link of your deployed app from your JSON project. In the meanwhile, if you ever change any bit of code later on, you need to run the 'npm run build' command again.
